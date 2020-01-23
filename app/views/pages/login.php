@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="<?php URLROOT?>/css/bootstrap.css">
     <link rel="stylesheet" href="<?php URLROOT?>/css/font-awesome.css">
     <link rel="stylesheet" href="<?php URLROOT?>/css/style.css">
-    <title><?php echo $data['title'] ?></title>
+    <title><?php echo SITENAME ?></title>
 </head>
 <body>
 

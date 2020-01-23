@@ -20,7 +20,7 @@
         </div>
 
         <div class="top-right links">
-            <a href="<?php ?>">Login</a>
+            <a href="<?php echo URLROOT ?>/views/login">Login</a>
             <a href="view/auth/signup.php">Signup</a>
         </div>
 
