@@ -3,7 +3,7 @@ class Pages extends Controller
 {
     public function __construct()
     {
-        $this->postModel = $this->model('Post');
+        //$this->postModel = $this->model('Post');
     }
     public function index()
     {
@@ -11,7 +11,7 @@ class Pages extends Controller
             'title' => 'Boat',
         ];
 
-        $posts = $this -> postModel -> getPosts() ;
+        //$posts = $this->postModel->getPosts();
 
         $this->view('pages/index', $data);
     }
