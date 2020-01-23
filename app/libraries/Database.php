@@ -21,18 +21,18 @@ class Database
     public function __construct()
     {
         //set the Database Source Name(DSN)
-        $dsn = 'mysql:host=' . $this -> host . ';dbname=' . $this -> dbname;
+        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
 
         $options = array(
             PDO::ATTR_PERSISTENT => true,
-            PDO::ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         );
 
         //set the PDO instance
         try {
             $pdo = new PDO($dsn, $this->user, $this->password, $options);
         } catch (PDOException $except) {
-            $this->error = $except -> getMessage();
+            $this->error = $except->getMessage();
             echo $this->error;
         }
     }
@@ -40,7 +40,7 @@ class Database
     //prepared statements with query
     public function query($sql)
     {
-        $this->statement = $this -> databasehandler -> prepare($sql);
+        $this->statement = $this->databasehandler->prepare($sql);
     }
 
     //Bind values
@@ -49,42 +49,45 @@ class Database
         if (isNull($type)) {
             switch (true) {
                 case isInteger($value):
-                    $type = PDO::PARAM_INT ;
+                    $type = PDO::PARAM_INT;
                     break;
                 case isBool($value):
-                    $type = PDO::PARAM_BOOL ;
-                    break ;
+                    $type = PDO::PARAM_BOOL;
+                    break;
                 case isNull($value):
-                    $type = PDO::PARAM_NULL ;
-                    break ;
+                    $type = PDO::PARAM_NULL;
+                    break;
                 default:
-                    $type = PDO::PARAM_STR ;
-                    break ;
+                    $type = PDO::PARAM_STR;
             }
         }
-        $this->statement = bindValue($parameter, $value, $type) ;
+        $this->statement = bindValue($parameter, $value, $type);
     }
 
     //execute prepared statements
-    public function execute(){
-        return $this -> statement -> execute();
+    public function execute()
+    {
+        return $this->statement->execute();
     }
 
     //fetching results as objects
-    public function resultSet(){
-        $this -> execute() ;
-        return $this -> statement -> fetchAll(PDO::FETCH_OBJ) ; 
+    public function resultSet()
+    {
+        $this->execute();
+        return $this->statement->fetchAll(PDO::FETCH_OBJ);
     }
 
     //fetch single record as an object
-    public function singleRec(){
-        $this -> execute() ;
-        return $this -> statement -> fetch(PDO::FETCH_OBJ) ;
+    public function single()
+    {
+        $this->execute();
+        return $this->statement->fetch(PDO::FETCH_OBJ);
     }
 
-    //Get row count 
-    public function rowCount(){
-        $this -> execute() ;
-        return $this -> statement -> rowCount() ;
+    //Get row count
+    public function rowCount()
+    {
+        $this->execute();
+        return $this->statement->rowCount();
     }
 }

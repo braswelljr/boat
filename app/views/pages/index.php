@@ -20,7 +20,7 @@
         </div>
 
         <div class="top-right links">
-            <a href="view/auth/login.php">Login</a>
+            <a href="<?php ?>">Login</a>
             <a href="view/auth/signup.php">Signup</a>
         </div>
 
