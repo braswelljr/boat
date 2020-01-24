@@ -15,9 +15,16 @@
             <?php echo $data['title']; ?>
         </div>
 
-        <form class="form-control">
-            <label for="email"></label>
-            <input type="text" class="form-control" autocomplete>
+        <form>
+            <div class="form-group">
+                <label for="email">Email or Username</label>
+                <input type="text" class="form-control form-control-lg" autocomplete>
+            </div>
+            <div class="form-group">
+                <label for="email">Password</label>
+                <input type="password" class="form-control form-control-lg" autocomplete>
+            </div>
+            <button class="btn btn-outline-primary btn-lg btn-block">Login</button>
         </form>
     </div>
 
