@@ -4,31 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/form.css">
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/bootstrap.css">
-    <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/font-awesome.css">
-    <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/style.css">
     <title><?php echo SITENAME; ?></title>
 </head>
 <body>
     <div class="container">
+        <div class="site-name">
+            <img src="<?php echo URLROOT; ?>/logo/sailboat.png" alt="..." height="43px">
+            <?php echo SITENAME; ?>
+        </div>
+
         <div class="header" id="title">
             <?php echo $data['title']; ?>
         </div>
 
         <form class="needs-validation" novalidate>
             <div class="form-group">
-                <label for="email">Email or Username</label>
-                <input type="text" class="form-control form-control-lg" required>
+                <label for="email" style="font-size: 1.5em;">Email or Username</label>
+                <input type="text" class="form-control form-control-lg" placeholder="Email or Username" required>
                 <div class="valid-feedback">
                     Good!
                 </div>
                 <div class="invalid-feedback">
-                    Please provide a valid Username or E-mail!
+                    Please provide a valid E-mail or Username !
                 </div>
             </div>
             <div class="form-group">
-                <label for="email">Password</label>
-                <input type="password" class="form-control form-control-lg" required>
+                <label for="email" style="font-size: 1.5em;">Password</label>
+                <input type="password" class="form-control form-control-lg" placeholder="Password" required>
                 <div class="valid-feedback">
                     Good!
                 </div>
@@ -36,13 +40,13 @@
                     Please provide a valid password!
                 </div>
             </div>
-            <button class="btn btn-outline-primary btn-lg btn-block" type="submit">Login</button>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
         </form>
+        <div class="footer">
+            You can <a href="<?php echo URLROOT; ?>/views/signup">SIGNUP</a> here if you don't have an account with <a href="<?php echo URLROOT ?>">BOAT</a>
+        </div>
     </div>
 
     <script src="<?php echo URLROOT; ?>/js/formvalidate.js"></script>
-    <script src="<?php echo URLROOT; ?>/js/jquery-3.4.1.slim.min.js"></script>
-    <script src="<?php echo URLROOT; ?>/js/popper-1.16.0.min.js"></script>
-    <script src="<?php echo URLROOT; ?>/js/bootstrap.js"></script>
 </body>
-</html>
+</html>q
