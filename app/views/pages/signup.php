@@ -329,7 +329,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Signup</button>
+            <button class="btn btn-primary btn-lg btn-block" type="submit"><?php echo $data['title']; ?></button>
         </form>
         <div class="footer">
             You can <a href="<?php echo URLROOT; ?>/views/login">LOGIN</a> here if you already have an account with <a href="<?php echo URLROOT ?>">BOAT</a>

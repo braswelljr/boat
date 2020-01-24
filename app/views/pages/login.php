@@ -40,7 +40,7 @@
                     Please provide a valid password!
                 </div>
             </div>
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+            <button class="btn btn-primary btn-lg btn-block" type="submit"><?php echo $data['title']; ?></button>
         </form>
         <div class="footer">
             You can <a href="<?php echo URLROOT; ?>/views/signup">SIGNUP</a> here if you don't have an account with <a href="<?php echo URLROOT ?>">BOAT</a>
