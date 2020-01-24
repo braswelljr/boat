@@ -21,7 +21,7 @@
 
         <div class="top-right links">
             <a href="<?php echo URLROOT ?>/views/login">Login</a>
-            <a href="view/auth/signup.php">Signup</a>
+            <a href="<?php echo URLROOT ?>/view/signup">Signup</a>
         </div>
 
         <div class="content">

@@ -17,11 +17,19 @@ class Pages extends Controller
 
     public function login()
     {
-
         $data = [
             'title' => 'Login',
         ];
 
         $this->view('pages/login', $data);
+    }
+
+    public function signup()
+    {
+        $data = [
+            'title' => 'Signup',
+        ];
+
+        $this->view('pages/signup', $data);
     }
 }
