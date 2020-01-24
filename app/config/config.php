@@ -14,3 +14,6 @@ define('URLROOT', 'http://localhost:8080/boat');
 
 //SITE NAME
 define('SITENAME', 'Boat');
+
+//App Version
+define('APPVERSION', '1.0.0');
