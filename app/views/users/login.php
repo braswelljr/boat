@@ -22,7 +22,7 @@
         <form class="needs-validation" novalidate>
             <div class="form-group">
                 <label for="email" style="font-size: 1.5em;">Email or Username</label>
-                <input type="text" class="form-control form-control-lg" placeholder="Email or Username" required>
+                <input type="text" class="form-control form-control-lg" placeholder="Email or Username" value="<?php echo $data['name']; ?>" required>
                 <div class="valid-feedback">
                     Good!
                 </div>

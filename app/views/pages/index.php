@@ -20,8 +20,8 @@
         </div>
 
         <div class="top-right links">
-            <a href="<?php echo URLROOT ?>/views/login">Login</a>
-            <a href="<?php echo URLROOT ?>/view/signup">Signup</a>
+            <a href="<?php echo URLROOT ?>/users/login">Login</a>
+            <a href="<?php echo URLROOT ?>/users/signup">Signup</a>
         </div>
 
         <div class="content">
