@@ -28,6 +28,7 @@
                 </div>
                 <div class="invalid-feedback">
                     Please provide a valid E-mail or Username !
+                    <?php echo $data['name_error']; ?>
                 </div>
             </div>
             <div class="form-group">
@@ -38,9 +39,10 @@
                 </div>
                 <div class="invalid-feedback">
                     Please provide a valid password!
+                    <?php echo $data['password_error']; ?>
                 </div>
             </div>
-            <button class="btn btn-primary btn-lg btn-block" type="submit"><?php echo $data['title']; ?></button>
+            <button class="btn btn-primary btn-lg btn-block" type="submit" value="<?php echo $data['title'];?>"><?php echo $data['title']; ?></button>
         </form>
         <div class="footer">
             You can <a href="<?php echo URLROOT; ?>/views/signup">SIGNUP</a> here if you don't have an account with <a href="<?php echo URLROOT ?>">BOAT</a>
