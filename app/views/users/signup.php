@@ -24,7 +24,7 @@
                 <div class="col-md-6 mb-3">
                     <div class="form-group">
                         <label for="email">Firstname</label>
-                        <input type="text" class="form-control" name="firstname" value="<?php $data['firstname'] ?>" placeholder="Firstname" required>
+                        <input type="text" class="form-control" name="firstname" value="<?php $data['firstname']?>" placeholder="Firstname" required>
                         <div class="valid-feedback">
                             Good!
                         </div>
@@ -36,7 +36,7 @@
                 <div class="col-md-6 mb-3">
                     <div class="form-group">
                         <label for="email">Surname</label>
-                        <input type="text" class="form-control" name="surname" value="<?php $data['surname'] ?>" placeholder="Surname">
+                        <input type="text" class="form-control" name="surname" value="<?php $data['surname']?>" placeholder="Surname">
                         <div class="valid-feedback">
                             Good!
                         </div>
@@ -45,7 +45,7 @@
             </div>
             <div class="form-group">
                 <label for="email">Username</label>
-                <input type="text" class="form-control" name="username" value="<?php $data['username'] ?>" placeholder="Username" required>
+                <input type="text" class="form-control" name="username" value="<?php $data['username']?>" placeholder="Username" required>
                 <div class="valid-feedback">
                     Good!
                 </div>
@@ -55,7 +55,7 @@
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="text" class="form-control" name="email" value="<?php $data['email'] ?>" placeholder="Email" required>
+                <input type="text" class="form-control" name="email" value="<?php $data['email']?>" placeholder="Email" required>
                 <div class="valid-feedback">
                     Good!
                 </div>
@@ -67,7 +67,7 @@
                 <label for="email">Phone</label>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <select name="countryCode" value="<?php $data['countryCode'] ?>" class="form-control input-group-text" id="">
+                        <select name="countryCode" value="<?php $data['countryCode']?>" class="form-control input-group-text" id="">
                             <span class="input-group-text" id="basic-addon1">
                             <option data-countryCode="GB" value="44" Selected>UK (+44)</option>
                                 <option data-countryCode="US" value="1">USA (+1)</option>
@@ -290,7 +290,7 @@
                             </span>
                         </select>
                     </div>
-                    <input type="tel" class="form-control col-md" placeholder="23-456-7891" name="phone" value="<?php $data['phone'] ?>" required>
+                    <input type="tel" class="form-control col-md" placeholder="23-456-7891" name="phone" value="<?php $data['phone']?>" required>
                     <div class="valid-feedback">
                         Good!
                     </div>
@@ -303,7 +303,7 @@
                 <div class="col-md-6 mb-3">
                     <div class="form-group">
                         <label for="email">Password</label>
-                        <input type="password" class="form-control" name="password" value="<?php $data['password'] ?>" id="password" placeholder="Password" required>
+                        <input type="password" class="form-control" name="password" value="<?php $data['password']?>" id="password" placeholder="Password" required>
                         <small id="passwordHelpBlock" class="form-text text-muted">
                             Your must be more more than 8 letters including uppercase letters,numbers and special characters.
                         </small>
@@ -319,7 +319,7 @@
                 <div class="col-md-6 mb-3">
                     <div class="form-group">
                         <label for="email">Re-enter Password</label>
-                        <input type="password" class="form-control" name="repeatPassword" value="<?php $data['repeatPassword'] ?>" id="repeatPassword" placeholder="Re-enter Password" required>
+                        <input type="password" class="form-control" name="repeatPassword" value="<?php $data['repeatPassword']?>" id="repeatPassword" placeholder="Re-enter Password" required>
                         <small id="passwordHelpBlock" class="form-text text-muted"></small>
                         <div class="valid-feedback">
                             Good!
@@ -334,7 +334,7 @@
             <button class="btn btn-primary btn-lg btn-block" type="submit" value="<?php echo $data['title']; ?>"><?php echo $data['title']; ?></button>
         </form>
         <div class="footer">
-            You can <a href="<?php echo URLROOT; ?>/views/login">LOGIN</a> here if you already have an account with <a href="<?php echo URLROOT ?>">BOAT</a>
+            You can <a href="<?php echo URLROOT ?>/users/login">LOGIN</a> here if you already have an account with <a href="<?php echo URLROOT ?>">BOAT</a>
         </div>
     </div>
 

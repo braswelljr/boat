@@ -42,10 +42,10 @@
                     <?php echo $data['password_error']; ?>
                 </div>
             </div>
-            <button class="btn btn-primary btn-lg btn-block" type="submit" value="<?php echo $data['title'];?>"><?php echo $data['title']; ?></button>
+            <button class="btn btn-primary btn-lg btn-block" type="submit" value="<?php echo $data['title']; ?>"><?php echo $data['title']; ?></button>
         </form>
         <div class="footer">
-            You can <a href="<?php echo URLROOT; ?>/views/signup">SIGNUP</a> here if you don't have an account with <a href="<?php echo URLROOT ?>">BOAT</a>
+            You can <a href="<?php echo URLROOT; ?>/users/signup">SIGNUP</a> here if you don't have an account with <a href="<?php echo URLROOT ?>">BOAT</a>
         </div>
     </div>
 
