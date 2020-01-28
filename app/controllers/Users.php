@@ -33,23 +33,23 @@ class Users extends Controller
                 'repeatPassword_error' => '',
             ];
 
-            // //form validate
-            // //password length
-            // if (strlen($data['password']) < 8) {
-            //     $data['password_error'] = 'Password must be at least 8 characters';
-            // }
+            //form validate
+            //password length
+            if (strlen($data['password']) < 8) {
+                $data['password_error'] = 'Password must be at least 8 characters';
+            }
 
-            // //password match
-            // if ($data['password'] != $data['repeatPassword']) {
-            //     $data['repeatPassword_error'] = 'Passwords do not match';
-            // }
+            //password match
+            if ($data['password'] != $data['repeatPassword']) {
+                $data['repeatPassword_error'] = 'Passwords do not match';
+            }
 
-            // //make sure variables in data objects are empty
-            // if (empty($data['password_error']) && empty($data['repeatPassword_error'])) {
-            //     die('SUCCESS');
-            // } else {
-            //     $this->view('users/signup', $data);
-            // }
+            //make sure variables in data objects are empty
+            if (empty($data['password_error']) && empty($data['repeatPassword_error'])) {
+                die('SUCCESS');
+            } else {
+                $this->view('users/signup', $data);
+            }
 
             $this->view('users/signup', $data);
 
