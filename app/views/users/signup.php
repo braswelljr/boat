@@ -24,7 +24,7 @@
                 <div class="col-md-6 mb-3">
                     <div class="form-group">
                         <label for="email">Firstname</label>
-                        <input type="text" class="form-control" name="firstname" value="<?php $data['firstname']?>" placeholder="Firstname" required>
+                        <input type="text" class="form-control firstname" name="firstname" value="<?php $data['firstname']?>" placeholder="Firstname" onfocusout="validateFirstname()" required>
                         <div class="valid-feedback">
                             Good!
                         </div>
@@ -36,7 +36,7 @@
                 <div class="col-md-6 mb-3">
                     <div class="form-group">
                         <label for="email">Surname</label>
-                        <input type="text" class="form-control" name="surname" value="<?php $data['surname']?>" placeholder="Surname">
+                        <input type="text" class="form-control surname" name="surname" value="<?php $data['surname']?>" placeholder="Surname" onfocusout="validateSurname()">
                         <div class="valid-feedback">
                             Good!
                         </div>
@@ -45,7 +45,7 @@
             </div>
             <div class="form-group">
                 <label for="email">Username</label>
-                <input type="text" class="form-control" name="username" value="<?php $data['username']?>" placeholder="Username" required>
+                <input type="text" class="form-control username" name="username" value="<?php $data['username']?>" placeholder="Username" onfocusout="validateUsername()" required>
                 <div class="valid-feedback">
                     Good!
                 </div>
@@ -55,7 +55,7 @@
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="text" class="form-control" name="email" value="<?php $data['email']?>" placeholder="Email" required>
+                <input type="text" class="form-control email" name="email" value="<?php $data['email']?>" placeholder="Email" onfocusout="validateEmail()" required>
                 <div class="valid-feedback">
                     Good!
                 </div>
@@ -290,7 +290,7 @@
                             </span>
                         </select>
                     </div>
-                    <input type="tel" class="form-control col-md" placeholder="23-456-7891" name="phone" value="<?php $data['phone']?>" required>
+                    <input type="tel" class="form-control col-md phone" placeholder="23-456-7891" name="phone" value="<?php $data['phone']?>" onfocusout="validatePhone()" required>
                     <div class="valid-feedback">
                         Good!
                     </div>
@@ -303,7 +303,7 @@
                 <div class="col-md-6 mb-3">
                     <div class="form-group">
                         <label for="email">Password</label>
-                        <input type="password" class="form-control" name="password" value="<?php $data['password']?>" id="password" placeholder="Password" required>
+                        <input type="password" class="form-control password" name="password" value="<?php $data['password']?>" id="password" placeholder="Password" onfocusout="validatePassword()" required>
                         <small id="passwordHelpBlock" class="form-text text-muted">
                             Your must be more more than 8 letters including uppercase letters,numbers and special characters.
                         </small>
@@ -319,7 +319,7 @@
                 <div class="col-md-6 mb-3">
                     <div class="form-group">
                         <label for="email">Re-enter Password</label>
-                        <input type="password" class="form-control" name="repeatPassword" value="<?php $data['repeatPassword']?>" id="repeatPassword" placeholder="Re-enter Password" required>
+                        <input type="password" class="form-control repeatPassword" name="repeatPassword" value="<?php $data['repeatPassword']?>" id="repeatPassword" placeholder="Re-enter Password" onfocusout="validateRepeatPassword()" required>
                         <small id="passwordHelpBlock" class="form-text text-muted"></small>
                         <div class="valid-feedback">
                             Good!
