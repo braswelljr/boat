@@ -19,27 +19,25 @@
             <?php echo $data['title']; ?>
         </div>
 
-        <form class="needs-validation" novalidate>
+        <form class="needs-validation" action="<?php echo URLROOT; ?>/users/login" method="post" novalidate>
             <div class="form-group">
                 <label for="email" style="font-size: 1.5em;">Email or Username</label>
-                <input type="text" class="form-control form-control-lg" placeholder="Email or Username" value="<?php echo $data['name']; ?>" required>
+                <input type="text" class="form-control form-control-lg <?php echo (!empty($data['name_err'])) ? 'is-invalid' : ''; ?>" placeholder="Email or Username" value="<?php echo $data['name']; ?>" required>
                 <div class="valid-feedback">
                     Good!
                 </div>
                 <div class="invalid-feedback">
-                    Please provide a valid E-mail or Username !
-                    <?php echo $data['name_error']; ?>
+                    <?php echo $data['name_err']; ?>
                 </div>
             </div>
             <div class="form-group">
                 <label for="email" style="font-size: 1.5em;">Password</label>
-                <input type="password" class="form-control form-control-lg" placeholder="Password" required>
+                <input type="password" class="form-control form-control-lg <?php echo (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>" placeholder="Password" required>
                 <div class="valid-feedback">
                     Good!
                 </div>
                 <div class="invalid-feedback">
-                    Please provide a valid password!
-                    <?php echo $data['password_error']; ?>
+                    <?php echo $data['password_err']; ?>
                 </div>
             </div>
             <button class="btn btn-primary btn-lg btn-block" type="submit" value="<?php echo $data['title']; ?>"><?php echo $data['title']; ?></button>
@@ -49,6 +47,6 @@
         </div>
     </div>
 
-    <script src="<?php echo URLROOT; ?>/js/formvalidate.js"></script>
+    <script src="<?php //echo URLROOT; ?>/js/formvalidate.js"></script>
 </body>
 </html>q
