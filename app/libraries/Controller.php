@@ -1,7 +1,7 @@
 <?php
 /*
- *Base controller\
- *Loads models and views
+ *Base controller
+ *Loads models, views and helpers
  */
 class Controller
 {
@@ -25,4 +25,12 @@ class Controller
             die('view does not exist');
         }
     }
+    // public function helpers($helper)
+    // {
+    //     //require helper file
+    //     require_once '../app/helpers/' . $helper . '.php';
+
+    //     //instantiate helper
+    //     return new $helpers;
+    // }
 }

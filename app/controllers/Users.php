@@ -22,7 +22,7 @@ class Users extends Controller
                 'surname' => trim($_POST['surname']),
                 'username' => trim($_POST['username']),
                 'email' => trim($_POST['email']),
-                'phone' => trim($_POST['countryCode']) + trim($_POST['phone']),
+                'phone' => trim($_POST['countryCode'] . $_POST['phone']),
                 'password' => trim($_POST['password']),
                 'repeatPassword' => trim($_POST['repeatPassword']),
                 'firstname_err' => '',
@@ -74,18 +74,17 @@ class Users extends Controller
             // Make sure errors are empty
             if (empty($data['email_err']) && empty($data['username_err']) && empty($data['password_err']) && empty($data['repeatPassword_err'])) {
                 // Validated
-                
-                 // Hash Password
+
+                // Hash Password
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
 
                 // Register User
-                if($this->userModel->signup($data)){
+                if ($this->userModel->signup($data)) {
                     flash('signup success', 'You are registered and can log in');
                     redirect('users/login');
                 } else {
                     die('Something went wrong');
                 }
-
 
             } else {
                 // Load view with errors
