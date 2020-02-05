@@ -12,17 +12,18 @@ class User
     // Regsiter user
     public function signup($data)
     {
-        $this->db->query('INSERT INTO users (firstname, surname, username, email, phone, password) VALUES(:firstname, :surname, :username, :email, :phone,:password)');
+        $this->database->query('INSERT INTO users (firstname, surname, username, email, phone, password) VALUES(:firstname, :surname, :username, :email, :phone, :password)');
+
         // Bind values
-        $this->db->bind(':firstname', $data['firstname']);
-        $this->db->bind(':surname', $data['surname']);
-        $this->db->bind(':username', $data['username']);
-        $this->db->bind(':email', $data['email']);
-        $this->db->bind(':phone', $data['phone']);
-        $this->db->bind(':password', $data['password']);
+        $this->database->bind(':firstname', $data['firstname']);
+        $this->database->bind(':surname', $data['surname']);
+        $this->database->bind(':username', $data['username']);
+        $this->database->bind(':email', $data['email']);
+        $this->database->bind(':phone', $data['phone']);
+        $this->database->bind(':password', $data['password']);
 
         // Execute
-        if ($this->db->execute()) {
+        if ($this->database->execute()) {
             return true;
         } else {
             return false;
@@ -32,10 +33,10 @@ class User
     // Login User
     public function login($name, $password)
     {
-        $this->db->query('SELECT * FROM users WHERE name = :name');
-        $this->db->bind(':name', $name);
+        $this->database->query('SELECT * FROM users WHERE name = :name');
+        $this->database->bind(':name', $name);
 
-        $row = $this->db->single();
+        $row = $this->database->single();
 
         $hashed_password = $row->password;
         if (password_verify($password, $hashed_password)) {
@@ -48,14 +49,14 @@ class User
     // Find user by email
     public function findUserByEmail($email)
     {
-        $this->db->query('SELECT * FROM users WHERE email = :email');
+        $db = $this->database->query('SELECT * FROM users WHERE email = :email');
         // Bind value
-        $this->db->bind(':email', $email);
+        $this->database->bind(':email', $email);
 
-        $row = $this->db->single();
+        $row = $this->database->single();
 
         // Check row
-        if ($this->db->rowCount() > 0) {
+        if ($this->database->rowCount() > 0) {
             return true;
         } else {
             return false;
