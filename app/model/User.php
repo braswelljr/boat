@@ -31,15 +31,16 @@ class User
     }
 
     // Login User
-    public function login($name, $password)
+    public function login($data, $password)
     {
-        $this->database->query('SELECT * FROM users WHERE name = :name');
-        $this->database->bind(':name', $name);
+        $this->database->query('SELECT * FROM users WHERE email = :email OR username = :usename');
+        $this->database->bind(':email', $data);
+        $this->database->bind(':usename',$data);
 
         $row = $this->database->single();
 
-        $hashed_password = $row->password;
-        if (password_verify($password, $hashed_password)) {
+        $hashedPassword = $row->password;
+        if (password_verify($password, $hashedPassword)) {
             return $row;
         } else {
             return false;
@@ -62,4 +63,21 @@ class User
             return false;
         }
     }
+
+     // Find user by username
+     public function findUserByUsername($username)
+     {
+         $db = $this->database->query('SELECT * FROM users WHERE username = :username');
+         // Bind value
+         $this->database->bind(':username', $username);
+ 
+         $row = $this->database->single();
+ 
+         // Check row
+         if ($this->database->rowCount() > 0) {
+             return true;
+         } else {
+             return false;
+         }
+     }
 }

@@ -3,7 +3,7 @@
 require_once 'config/config.php';
 
 //autoload helpers
-require_once 'helpers/Session.php';
+//require_once 'helpers/Session.php';
 require_once 'helpers/urlHelper.php';
 
 // spl_autoload_register(
