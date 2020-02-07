@@ -35,11 +35,12 @@ class User
     {
         $this->database->query('SELECT * FROM users WHERE email = :email OR username = :usename');
         $this->database->bind(':email', $data);
-        $this->database->bind(':usename',$data);
+        $this->database->bind(':usename', $data);
 
         $row = $this->database->single();
+        $rowObject = json_decode(json_encode($row));
 
-        $hashedPassword = $row->password;
+        $hashedPassword = $rowObject->password;
         if (password_verify($password, $hashedPassword)) {
             return $row;
         } else {
@@ -64,20 +65,20 @@ class User
         }
     }
 
-     // Find user by username
-     public function findUserByUsername($username)
-     {
-         $db = $this->database->query('SELECT * FROM users WHERE username = :username');
-         // Bind value
-         $this->database->bind(':username', $username);
- 
-         $row = $this->database->single();
- 
-         // Check row
-         if ($this->database->rowCount() > 0) {
-             return true;
-         } else {
-             return false;
-         }
-     }
+    // Find user by username
+    public function findUserByUsername($username)
+    {
+        $db = $this->database->query('SELECT * FROM users WHERE username = :username');
+        // Bind value
+        $this->database->bind(':username', $username);
+
+        $row = $this->database->single();
+
+        // Check row
+        if ($this->database->rowCount() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
