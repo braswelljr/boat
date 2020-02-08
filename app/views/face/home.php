@@ -16,9 +16,13 @@ session_start();
     <title><?php echo SITENAME; ?></title>
 </head>
 <body>
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+        <img class="logo" src="<?php echo URLROOT; ?>/logo/sailboat.png" alt="logo"><?php echo SITENAME; ?>
+    </div>
     <div class="container-fluid">
-        <div class="shadow-lg p-3 mb-5 bg-white rounded header">
-            <img class="logo" src="<?php echo URLROOT; ?>/logo/sailboat.png" alt="logo"><?php echo SITENAME; ?>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
         </div>
     </div>
 </body>
