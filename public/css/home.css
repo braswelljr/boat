@@ -1,0 +1,14 @@
+.sidebar{
+    background-color: #45aaf2;
+}
+.sailboat{
+    height: 3rem;
+}
+.side-icons{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    display: table-cell;
+}
+.applogo{
+    height: 2.5rem;
+}
