@@ -35,6 +35,11 @@ session_start();
         </div>
     </div>
 
+    <!-- javascript source files root for bootstrap, jquery, popper and fontawesome for web -->
+    <script src="<?php echo URLROOT; ?>/public/js/bootstrap.js"></script>
+    <script src="<?php echo URLROOT; ?>/public/js/jquery.min.js"></script>
+    <script src="<?php echo URLROOT; ?>/public/js/popper.min.js"></script>
+    <script src="<?php echo URLROOT; ?>/public/js/all.js"></script>
     <script src="<?php echo URLROOT; ?>/public/js/all.js"></script>
     <script src="<?php echo URLROOT; ?>/public/js/fontawesome.js"></script>
     <script src="<?php echo URLROOT; ?>/public/js/regular.js"></script>
