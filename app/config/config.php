@@ -10,7 +10,7 @@ define('DB_NAME', 'boat');
 define('APPROOT', dirname(dirname(__FILE__)));
 
 //URL root
-define('URLROOT', 'https://braswelljr.com/boat.github.io');
+define('URLROOT', 'https://braswelljr.com/boat.github.io/');
 
 //SITE NAME
 define('SITENAME', 'Boat');
